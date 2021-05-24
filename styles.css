@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+details summary {
+  cursor: pointer;
+  list-style: none;
+  background-color: papayawhip;
+  padding: 0 1rem;
+}
+
+details summary * {
+  display: inline-block;
+}
+
+details summary::before {
+  content: '👉';
+  display: inline-block;
+  transition: transform 0.2s ease;
+  margin-right: 1rem;
+}
+
+details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+details article {
+  background-color: aquamarine;
+  padding: 1rem 3.5rem;
+}
+
+details article *:first-child,
+details article *:last-child {
+  margin-top: 0;
+  margin-bottom: 0;
+}
